@@ -18,42 +18,23 @@ We would love to see how you use this awesome admin template. You can notify us 
 
 **[Documentation](https://colorlibhq.github.io/gentelella/)**
 
-## Installation via Package Manager
+# Installation
 
-Our goal is to make it installable on different Package Manager! Do you want to use it on your favorite Package Manager and you know how? Pull request all the way! 
+You need [Docker Desktop](https://www.docker.com/products/docker-desktop/) to run the template. Run the following commands:
 
-As of now, this is some installation available:
-
-**Bower**
-
-```
-bower install gentelella --save
+```shell
+./docker-build.sh
+./docker-connect.sh
 ```
 
-**npm**
+These commands will first build the container for the application and then log you into the container. You will get an output similar to the below:
+
+```shell
+➜  gentelella git:(main) ✗ ./docker-connect.sh
+Web:    http://localhost:35888
+root@gentellela:/var/www/html# 
 
 ```
-npm install gentelella --save
-```
-
-**yarn**
-
-```
-yarn add gentelella
-```
-## How to contribute
-To contribute, please ensure that you have stable [Node.js](https://nodejs.org/) and [npm](https://npmjs.com) installed.
-
-Test if Gulp CLI is installed by running `gulp --version`.  If the command isn't found, run `npm install -g gulp`.  For more information about installing Gulp, see the Gulp's [Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
-
-To have all gulp dependencies run ```npm install```
-
-If `gulp` is installed, follow the steps below.
-
-1. Fork and clone the repo.
-2. Run `gulp`, this will open gentelella on your default browser
-3. Now you can code, code and code!
-4. Submit a pull request
 
 ## Gentelella for other platforms and frameworks
 
