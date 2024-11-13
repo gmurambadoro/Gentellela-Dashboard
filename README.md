@@ -36,6 +36,8 @@ root@gentellela:/var/www/html#
 
 ```
 
+The template can then be accessed via your browser at [http://localhost:35888](http://localhost:35888).
+
 ## Gentelella for other platforms and frameworks
 
 * [Gentelella on Ruby on Rails](https://github.com/iogbole/gentelella_on_rails) thanks to Israel Ogbole.
