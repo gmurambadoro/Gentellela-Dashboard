@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: gentellela
+    restart: unless-stopped
+    container_name: gentellela
+    ports:
+      - "35888:80" # the service will be available in my browser at http://localhost:35888
+    volumes:
+      - .:/var/www/html # all files in current directory will also be available in the container, allowing you to update the source code with your IDE
+      - ./000-default.conf:/etc/apache2/sites-available/000-default.conf:ro # Override the default apache vhost file to ensure that the Laravel application is served by default
+      - ./.bashrc:/root/.bashrc:ro # Override the default apache vhost file to ensure that the Laravel application is served by default
+      # the contents of 000-default.conf is obtained from https://symfony.com/doc/current/setup/web_server_configuration.html, with modifications applied to match folder locations
+
